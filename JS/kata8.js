@@ -103,3 +103,25 @@ function solution(str) {
 
 console.log(solution("world")); //'dlrow'
 console.log(solution("hello")); //'olleh'
+
+// ===================================================
+// 7. Opposite number
+// Very simple, given an integer or a floating-point number, find its opposite.
+
+// Examples:
+
+// 1: -1
+// 14: -14
+// -34: 34
+// MS
+function opposite(number) {
+  let opNumber = 0 - number;
+  return opNumber;
+}
+// BP
+// function opposite(number) {
+//   return -number;
+// }
+console.log(opposite(1)); //-1
+console.log(opposite(4.25)); //-4.25
+console.log(opposite(-5)); //5
