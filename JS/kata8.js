@@ -70,7 +70,7 @@ function DNAtoRNA(dna) {
 // }
 
 // ===================================================
-// Define a function that removes duplicates from an array of numbers and returns it as a result.
+// 5. Define a function that removes duplicates from an array of numbers and returns it as a result.
 
 // The order of the sequence has to stay the same.
 function distinct(a) {
@@ -82,3 +82,24 @@ console.log([1, 2]); //[1, 2]
 console.log([1, 1, 2]); //[1, 2];
 console.log([1, 1, 1, 2, 3, 4, 5]); // [1, 2, 3, 4, 5];
 console.log([1, 2, 2, 3, 3, 4, 4, 5, 6, 7, 7, 7]); //[1, 2, 3, 4, 5, 6, 7]
+
+// ===================================================
+// 6. Reversed strings
+
+// Complete the solution so that it reverses the string passed into it.
+
+// 'world'  =>  'dlrow'
+// 'word'   =>  'drow'
+// my solution
+function solution(str) {
+  let array = str.split("");
+  array.reverse();
+  return array.join("");
+}
+// best practice
+// function solution(str) {
+//   return str.split("").reverse().join("");
+// }
+
+console.log(solution("world")); //'dlrow'
+console.log(solution("hello")); //'olleh'
