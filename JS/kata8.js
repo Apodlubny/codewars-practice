@@ -125,6 +125,7 @@ function opposite(number) {
 console.log(opposite(1)); //-1
 console.log(opposite(4.25)); //-4.25
 console.log(opposite(-5)); //5
+// ===================================================
 
 // 8. String repeat
 
@@ -141,3 +142,22 @@ function repeatStr(n, s) {
 console.log(repeatStr(3, "*"));
 console.log(repeatStr(5, "#"));
 console.log(repeatStr(7, "Ab"));
+
+// ===================================================
+
+// 9. Invert values
+// Given a set of numbers, return the additive inverse of each. Each positive becomes negatives, and the negatives become positives.
+
+// invert([1,2,3,4,5]) == [-1,-2,-3,-4,-5]
+// invert([1,-2,3,-4,5]) == [-1,2,-3,4,-5]
+// invert([]) == []
+// You can assume that all values are integers. Do not mutate the input array/list.
+
+// MS
+function invert(array) {
+  return array.map((n) => n * -1);
+}
+
+console.log(invert([1, 2, 3, 4, 5])); //[-1,-2,-3,-4,-5]
+console.log(invert([])); //[]
+console.log(invert([0])); //[-0]
