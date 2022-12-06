@@ -186,3 +186,28 @@ console.log(century(1705)); //18
 console.log(century(1900)); //19
 console.log(century(2000)); //20
 console.log(century(85)); //1
+
+// ===================================================
+// 11. Convert number to reversed array of digits
+// Convert number to reversed array of digits
+// Given a random non-negative number, you have to return the digits of this number within an array in reverse order.
+
+// Example(Input => Output):
+// 35231 => [1,3,2,5,3]
+// 0 => [0]
+//  MS
+function digitize(n) {
+  let res = String(n)
+    .split("")
+    .reverse()
+    .map((num) => Number(num));
+  return res;
+}
+
+// BP
+// function digitize(n) {
+//   return String(n).split("").map(Number).reverse();
+// }
+
+console.log(digitize(35231)); //[1,3,2,5,3]
+console.log(digitize(548702838394)); // [4,9,3,8,3,8,2,0,7,8,4,5]
