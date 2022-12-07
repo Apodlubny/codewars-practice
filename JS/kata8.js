@@ -211,3 +211,28 @@ function digitize(n) {
 
 console.log(digitize(35231)); //[1,3,2,5,3]
 console.log(digitize(548702838394)); // [4,9,3,8,3,8,2,0,7,8,4,5]
+// ===================================================
+// 12. Grasshopper - Summation
+// Summation
+// Write a program that finds the summation of every number from 1 to num. The number will always be a positive integer greater than 0.
+
+// For example:
+
+// summation(2) -> 3
+// 1 + 2
+
+// summation(8) -> 36
+// 1 + 2 + 3 + 4 + 5 + 6 + 7 + 8
+// MS
+var summation = function (num) {
+  let sum = 0;
+  for (let i = 0; i <= num; i += 1) {
+    sum += i;
+  }
+  return sum;
+};
+// BP
+// var summation = (num) => (num * (num + 1)) / 2;
+console.log(summation(1)); //1
+console.log(summation(8)); //36
+console.log(summation(213)); //22791
