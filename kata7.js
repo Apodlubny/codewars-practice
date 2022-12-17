@@ -98,3 +98,30 @@ console.log(SeriesSum(1)); //'1.00'
 console.log(SeriesSum(2)); //'1.25'
 console.log(SeriesSum(5)); //'1.57'
 console.log(SeriesSum(58)); //'2.4'
+// ===================================================
+// 18. Regex validate PIN code
+// ATM machines allow 4 or 6 digit PIN codes and PIN codes cannot contain anything but exactly 4 digits or exactly 6 digits.
+
+// If the function is passed a valid PIN string, return true, else return false.
+
+// Examples (Input --> Output)
+// "1234"   -->  true
+// "12345"  -->  false
+// "a234"   -->  false
+// MS
+function validatePIN(pin) {
+  if (pin.length !== 4 && pin.length !== 6) return false;
+  for (let i = 0; i < pin.length; i += 1) {
+    if (pin[i] < "0" || pin[i] > "9") return false;
+  }
+  return true;
+}
+// BP
+// function validatePIN(pin) {
+//   return /^(\d{4}|\d{6})$/.test(pin);
+// }
+console.log(validatePIN("1")); //false
+console.log(validatePIN("123")); //false
+console.log(validatePIN("a234")); //false
+console.log(validatePIN("1111")); //true
+console.log(validatePIN("111123")); //true
