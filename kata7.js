@@ -138,3 +138,18 @@ console.log(validatePIN("111123")); //true
 // Not Jaden-Cased: "How can mirrors be real if our eyes aren't real"
 // Jaden-Cased:     "How Can Mirrors Be Real If Our Eyes Aren't Real"
 
+// MS
+String.prototype.toJadenCase = function () {
+  return this.split(" ")
+    .map(function (word) {
+      return word.charAt(0).toUpperCase() + word.slice(1);
+    })
+    .join(" ");
+};
+console.log(toJadenCase("Dying is mainstream")); //"Dying Is Mainstream"
+console.log(toJadenCase("When I die. then you will realize")); //"When I Die. Then You Will Realize"
+console.log(
+  toJadenCase(
+    "I should just stop tweeting, the human conciousness must raise before I speak my juvenile philosophy."
+  )
+); //"I Should Just Stop Tweeting, The Human Conciousness Must Raise Before I Speak My Juvenile Philosophy."
