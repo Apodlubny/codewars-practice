@@ -153,3 +153,32 @@ console.log(
     "I should just stop tweeting, the human conciousness must raise before I speak my juvenile philosophy."
   )
 ); //"I Should Just Stop Tweeting, The Human Conciousness Must Raise Before I Speak My Juvenile Philosophy."
+// ===================================================
+
+// 20. Count the divisors of a number
+// Count the number of divisors of a positive integer n.
+
+// Random tests go up to n = 500000.
+
+// Examples (input --> output)
+// 4 --> 3 (1, 2, 4)
+// 5 --> 2 (1, 5)
+// 12 --> 6 (1, 2, 3, 4, 6, 12)
+// 30 --> 8 (1, 2, 3, 5, 6, 10, 15, 30)
+// Note you should only return a number, the count of divisors. The numbers between parentheses are shown only for you to see which numbers are counted in each case.
+// MS
+function getDivisorsCnt(n) {
+  let result = 0;
+  for (let i = n; i > 0; i -= 1) {
+    if (n % i === 0) {
+      result += 1;
+    }
+  }
+  return result;
+}
+
+console.log(getDivisorsCnt(1)); //1
+console.log(getDivisorsCnt(10)); //4
+console.log(getDivisorsCnt(25)); //3
+
+// ===================================================
