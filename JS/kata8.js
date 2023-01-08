@@ -281,11 +281,41 @@ This kata is about multiplying a given number by eight if it is an even number a
 
 
 */
-function simpleMultiplication(number){
-  return number%2 === 0 ? number * 8 : number * 9;
+function simpleMultiplication(number) {
+  return number % 2 === 0 ? number * 8 : number * 9;
 }
 
 console.log(simpleMultiplication(2)); //16
 console.log(simpleMultiplication(1)); //9
 console.log(simpleMultiplication(8)); //64
 console.log(simpleMultiplication(5)); //45
+
+/* 
+23. Are You Playing Banjo?
+
+Create a function which answers the question "Are you playing banjo?".
+If your name starts with the letter "R" or lower case "r", you are playing banjo!
+
+The function takes a name as its only argument, and returns one of the following strings:
+
+name + " plays banjo" 
+name + " does not play banjo"
+Names given are always valid strings.
+
+ */
+
+function areYouPlayingBanjo(name) {
+  return name[0] === "R" || name[0] === "r"
+    ? `${name} plays banjo`
+    : `${name} does not play banjo`;
+}
+
+/* BP
+function areYouPlayingBanjo(name) {
+  return name + (name[0].toLowerCase() == 'r' ? ' plays' : ' does not play') + " banjo";
+}
+ */
+
+console.log(areYouPlayingBanjo("Adam")); //"Adam does not play banjo"
+console.log(areYouPlayingBanjo("bravo")); //"bravo does not play banjo"
+console.log(areYouPlayingBanjo("rolf")); //"rolf plays banjo"
