@@ -254,7 +254,9 @@ console.log(
 ); //['Open', 'Open', 'Open', 'Open']
 // ===================================================
 /* 
-26. Given the triangle of consecutive odd numbers:
+26. Sum of odd numbers
+
+Given the triangle of consecutive odd numbers:
 
              1
           3     5
