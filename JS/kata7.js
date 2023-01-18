@@ -1,5 +1,5 @@
 // ===================================================
-// 15. You're a square!
+// 1. You're a square!
 // A square of squares
 // You like building blocks. You especially like building blocks that are squares. And what you even like more, is to arrange them into a square of square building blocks!
 
@@ -36,7 +36,7 @@ var isSquare = function (n) {
 // }
 
 // ===================================================
-// 16. Highest and Lowest
+// 2. Highest and Lowest
 // In this little assignment you are given a string of space separated numbers, and have to return the highest and lowest number.
 
 // Examples
@@ -58,7 +58,7 @@ console.log(highAndLow("-1 -1")); //"-1 -1"
 console.log(highAndLow("-1 -1 0")); //"0 -1"
 console.log(highAndLow("42")); //"42"
 // ===================================================
-// 17. Sum of the first nth term of Series
+// 3. Sum of the first nth term of Series
 // Your task is to write a function which returns the sum of following series upto nth term(parameter).
 
 // Series: 1 + 1/4 + 1/7 + 1/10 + 1/13 + 1/16 +...
@@ -99,7 +99,7 @@ console.log(SeriesSum(2)); //'1.25'
 console.log(SeriesSum(5)); //'1.57'
 console.log(SeriesSum(58)); //'2.4'
 // ===================================================
-// 18. Regex validate PIN code
+// 4. Regex validate PIN code
 // ATM machines allow 4 or 6 digit PIN codes and PIN codes cannot contain anything but exactly 4 digits or exactly 6 digits.
 
 // If the function is passed a valid PIN string, return true, else return false.
@@ -128,7 +128,7 @@ console.log(validatePIN("111123")); //true
 
 // ===================================================
 
-// 19. Jaden Casing Strings
+// 5. Jaden Casing Strings
 // Jaden Smith, the son of Will Smith, is the star of films such as The Karate Kid (2010) and After Earth (2013). Jaden is also known for some of his philosophy that he delivers via Twitter. When writing on Twitter, he is known for almost always capitalizing every word. For simplicity, you'll have to capitalize each word, check out how contractions are expected to be in the example below.
 
 // Your task is to convert strings to how they would be written by Jaden Smith. The strings are actual quotes from Jaden Smith, but they are not capitalized in the same way he originally typed them.
@@ -155,7 +155,7 @@ console.log(
 ); //"I Should Just Stop Tweeting, The Human Conciousness Must Raise Before I Speak My Juvenile Philosophy."
 // ===================================================
 
-// 20. Count the divisors of a number
+// 6. Count the divisors of a number
 // Count the number of divisors of a positive integer n.
 
 // Random tests go up to n = 500000.
@@ -182,7 +182,7 @@ console.log(getDivisorsCnt(10)); //4
 console.log(getDivisorsCnt(25)); //3
 
 // ===================================================
-// 21. Testing 1-2-3
+// 7. Testing 1-2-3
 
 // DESCRIPTION:
 // Your team is writing a fancy new text editor and you've been tasked with implementing the line numbering.
@@ -202,7 +202,7 @@ const number = (array) => array.map((n, i) => `${i + 1}: ${n}`);
 console.log(number(["a", "b", "c"])); //["1: a", "2: b", "3: c"]);
 
 // ===================================================
-/* 25. Categorize New Member
+/* 8. Categorize New Member
 The Western Suburbs Croquet Club has two categories of membership, Senior and Open. They would like your help with an application form that will tell prospective members which category they will be placed.
 
 To be a senior, a member must be at least 55 years old and have a handicap greater than 7. In this croquet club, handicaps range from -2 to +26; the better the player the lower the handicap.
@@ -254,7 +254,7 @@ console.log(
 ); //['Open', 'Open', 'Open', 'Open']
 // ===================================================
 /* 
-26. Sum of odd numbers
+9. Sum of odd numbers
 
 Given the triangle of consecutive odd numbers:
 
@@ -276,3 +276,28 @@ function rowSumOddNumbers(n) {
 console.log(rowSumOddNumbers(1)); //1
 console.log(rowSumOddNumbers(42)); //74088
 // ===================================================
+/* 
+10. Descending Order
+Your task is to make a function that can take any non-negative integer as an argument and return it with its digits in descending order. Essentially, rearrange the digits to create the highest possible number.
+
+Examples:
+Input: 42145 Output: 54421
+
+Input: 145263 Output: 654321
+
+Input: 123456789 Output: 987654321
+ */
+
+function descendingOrder(n) {
+  return parseInt(
+    String(n)
+      .split("")
+      .sort((a, b) => b - a)
+      .join("")
+  );
+}
+console.log(descendingOrder(0)); //0
+console.log(descendingOrder(111)); //111
+console.log(descendingOrder(15)); //51
+console.log(descendingOrder(1021)); //2110
+console.log(descendingOrder(123456789)); //987654321

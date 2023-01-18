@@ -275,7 +275,7 @@ console.log(feast("blue-footed booby", "blueberry")); //true
 
 // ===================================================
 /* 
-22. Simple multiplication
+15. Simple multiplication
 DESCRIPTION:
 This kata is about multiplying a given number by eight if it is an even number and by nine otherwise.
 
@@ -291,7 +291,7 @@ console.log(simpleMultiplication(8)); //64
 console.log(simpleMultiplication(5)); //45
 
 /* 
-23. Are You Playing Banjo?
+16. Are You Playing Banjo?
 
 Create a function which answers the question "Are you playing banjo?".
 If your name starts with the letter "R" or lower case "r", you are playing banjo!
@@ -321,7 +321,7 @@ console.log(areYouPlayingBanjo("bravo")); //"bravo does not play banjo"
 console.log(areYouPlayingBanjo("rolf")); //"rolf plays banjo"
 
 /*
-24.  Opposites Attract
+17.  Opposites Attract
 
 Timmy & Sarah think they are in love, but around where they live, they will only know once they pick a flower each. If one of the flowers has an even number of petals and the other has an odd number of petals it means they are in love.
 
@@ -338,7 +338,7 @@ console.log(lovefunc(0, 1)); // true
 console.log(lovefunc(0, 0)); // false
 // ===================================================
 /* 
-27. altERnaTIng cAsE <=> ALTerNAtiNG CaSe
+18. altERnaTIng cAsE <=> ALTerNAtiNG CaSe
 
 Define String.prototype.toAlternatingCase (or a similar function/method such as to_alternating_case/toAlternatingCase/ToAlternatingCase in your selected language; see the initial solution for details) such that each lowercase letter becomes uppercase and each uppercase letter becomes lowercase. For example:
 
