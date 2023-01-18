@@ -360,3 +360,20 @@ console.log(toAlternatingCase("hello world")); //"HELLO WORLD"
 console.log(toAlternatingCase("1a2b3c4d5e")); //"1A2B3C4D5E"
 console.log(toAlternatingCase("HeLLo WoRLD")); //"hEllO wOrld"
 // ===================================================
+/* 
+19. Grasshopper - Debug sayHello
+Debugging sayHello function
+The starship Enterprise has run into some problem when creating a program to greet everyone as they come aboard. It is your job to fix the code and get the program working again!
+
+Example output:
+
+Hello, Mr. Spock
+ */
+
+function sayHello(name) {
+  return `Hello, ${name}`;
+}
+
+console.log(sayHello("Mr. Spock")); //'Hello, Mr. Spock'
+console.log(sayHello("Captain Kirk")); //'Hello, Captain Kirk'
+console.log(sayHello("Liutenant Uhura")); //'Hello, Liutenant Uhura'
