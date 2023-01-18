@@ -359,3 +359,4 @@ String.prototype.toAlternatingCase = function () {
 console.log(toAlternatingCase("hello world")); //"HELLO WORLD"
 console.log(toAlternatingCase("1a2b3c4d5e")); //"1A2B3C4D5E"
 console.log(toAlternatingCase("HeLLo WoRLD")); //"hEllO wOrld"
+// ===================================================
