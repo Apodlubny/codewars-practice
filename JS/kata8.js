@@ -377,3 +377,36 @@ function sayHello(name) {
 console.log(sayHello("Mr. Spock")); //'Hello, Mr. Spock'
 console.log(sayHello("Captain Kirk")); //'Hello, Captain Kirk'
 console.log(sayHello("Liutenant Uhura")); //'Hello, Liutenant Uhura'
+
+// ==================================================================================
+/* 
+20.Is the string uppercase?
+Create a method to see whether the string is ALL CAPS.
+
+Examples (input -> output)
+"c" -> False
+"C" -> True
+"hello I AM DONALD" -> False
+"HELLO I AM DONALD" -> True
+"ACSKLDFJSgSKLDFJSKLDFJ" -> False
+"ACSKLDFJSGSKLDFJSKLDFJ" -> True
+In this Kata, a string is said to be in ALL CAPS whenever it does not contain any lowercase letter so any string containing no letters at all is trivially considered to be in ALL CAPS.
+ */
+// MS
+String.prototype.isUpperCase = function () {
+  if (this == this.toUpperCase()) {
+    return true;
+  } else {
+    return false;
+  }
+};
+
+// BP
+/* 
+String.prototype.isUpperCase = function() {
+  return this.toUpperCase() === this.toString();
+} */
+
+console.log(isUpperCase("HELLO I AM DONALD")); //'HELLO I AM DONALD is upper case'
+console.log(isUpperCase("hello I AM DONALD")); //'HELLO I AM DONALD is  not upper case'
+// ==================================================================================
