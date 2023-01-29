@@ -374,3 +374,28 @@ function nbDig(n, d) {
 console.log(nbDig(5750, 0)); //4700, "n = 5750, d = 0"
 console.log(nbDig(11011, 2)); //9481, "n = 11011, d = 2"
 console.log(nbDig(8304, 7)); //3927, "n = 8304, d = 7")
+// ===================================================
+/*
+14. Sum of a sequence
+Your task is to make function, which returns the sum of a sequence of integers.
+
+The sequence is defined by 3 non-negative values: begin, end, step (inclusive).
+
+If begin value is greater than the end, function should returns 0
+
+Examples
+
+2,2,2 --> 2
+2,6,2 --> 12 (2 + 4 + 6)
+1,5,1 --> 15 (1 + 2 + 3 + 4 + 5)
+1,5,3  --> 5 (1 + 4)
+ */
+
+const sequenceSum = (begin, end, step) => {
+  let sum = 0;
+  for (let i = begin; i <= end; i += step) sum += i;
+  return sum;
+};
+console.log(sequenceSum(2, 6, 2)); //12
+console.log(sequenceSum(1, 5, 1)); //12
+console.log(sequenceSum(0, 15, 3)); //12
