@@ -47,3 +47,7 @@ console.log(twoSum([1, 2, 3], 4)); // [0,2]
 console.log(twoSum([1234, 5678, 9012], 14690)); // [1,2]
 console.log(twoSum([2, 2, 3], 4)); // [0,1]
 // ========================================================================================
+/* 3. Detect Pangram
+A pangram is a sentence that contains every single letter of the alphabet at least once. For example, the sentence "The quick brown fox jumps over the lazy dog" is a pangram, because it uses the letters A-Z at least once (case is irrelevant).
+
+Given a string, detect whether or not it is a pangram. Return True if it is, False if not. Ignore numbers and punctuation. */
