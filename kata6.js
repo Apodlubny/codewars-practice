@@ -109,3 +109,4 @@ assert.deepEqual(
   arrayDiff([1, 2, 2], [2]), // [1],"a was [1,2,2], b was [2]");
   console.log(arrayDiff([], [1, 2])) // [], "a was [], b was [1,2]")
 );
+console.log()
