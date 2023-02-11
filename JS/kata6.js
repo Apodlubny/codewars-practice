@@ -88,6 +88,8 @@ console.log(deleteNth([20, 37, 20, 21], 1)); // [20, 37, 21];
 console.log(deleteNth([1, 1, 3, 3, 7, 2, 2, 2, 2], 3)); // [1, 1, 3, 3, 7, 2, 2, 2]
 console.log(deleteNth([1, 1, 1, 1, 1], 5)); // [1,1,1,1,1];
 console.log(deleteNth([1, 2, 3, 1, 1, 2, 1, 2, 3, 3, 2, 4, 5, 3, 1], 3)); // [1, 2, 3, 1, 1, 2, 2, 3, 3, 4, 5]
+// ========================================================================================
+
 /* 
 5. Array.diff
 Your goal in this kata is to implement a difference function, which subtracts one list from another and returns the result.
@@ -109,4 +111,32 @@ assert.deepEqual(
   arrayDiff([1, 2, 2], [2]), // [1],"a was [1,2,2], b was [2]");
   console.log(arrayDiff([], [1, 2])) // [], "a was [], b was [1,2]")
 );
-console.log()
+// ========================================================================================
+/*
+6. Take a Ten Minutes Walk
+You live in the city of Cartesia where all roads are laid out in a perfect grid. You arrived ten minutes too early to an appointment, so you decided to take the opportunity to go for a short walk. The city provides its citizens with a Walk Generating App on their phones -- everytime you press the button it sends you an array of one-letter strings representing directions to walk (eg. ['n', 's', 'w', 'e']). You always walk only a single block for each letter (direction) and you know it takes you one minute to traverse one city block, so create a function that will return true if the walk the app gives you will take you exactly ten minutes (you don't want to be early or late!) and will, of course, return you to your starting point. Return false otherwise.
+
+Note: you will always receive a valid array containing a random assortment of direction letters ('n', 's', 'e', or 'w' only). It will never give you an empty array (that's not a walk, that's standing still!).
+ */
+
+function isValidWalk(walk) {
+  const north = walk.filter((item) => {
+    return item === "n";
+  }).length;
+  const south = walk.filter((item) => {
+    return item === "s";
+  }).length;
+  const east = walk.filter((item) => {
+    return item === "e";
+  }).length;
+  const west = walk.filter((item) => {
+    return item === "w";
+  }).length;
+
+  return walk.length === 10 && north === south && east === west;
+}
+console.log(isValidWalk(["n", "s"])); // false
+console.log(
+  isValidWalk(["n", "s", "n", "s", "n", "s", "n", "s", "n", "s", "n", "s"])
+); // false
+console.log(isValidWalk(["n", "s", "n", "s", "n", "s", "n", "s", "n", "s"])); // true
