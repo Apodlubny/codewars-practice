@@ -475,3 +475,14 @@ function hoopCount(n) {
 
 console.log(hoopCount(9)); // "Keep at it until you get it"
 console.log(hoopCount(10)); // "Great, now move on to tricks"
+// ==================================================================================
+/* 
+24. Returning Strings
+ Make a function that will return a greeting statement that uses an input; your program should return, "Hello, <name> how are you doing today?".
+
+[Make sure you type the exact thing I wrote or the program may not execute properly] */
+function greet(name) {
+  return `Hello, ${name} how are you doing today?`;
+}
+
+console.log(greet("Ryan")); //"Hello, Ryan how are you doing today?"
