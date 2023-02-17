@@ -486,3 +486,11 @@ function greet(name) {
 }
 
 console.log(greet("Ryan")); //"Hello, Ryan how are you doing today?"
+
+/* 
+25. MakeUpperCase
+ */
+
+function makeUpperCase(str) {
+  return str.toUpperCase();
+}
