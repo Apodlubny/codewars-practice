@@ -432,3 +432,29 @@ function isTriangle(a, b, c) {
 console.log(isTriangle(1, 2, 3)); //false
 console.log(isTriangle(4, 2, 3)); //true
 console.log(isTriangle(-5, 1, 3)); //false
+// ===================================================
+/* 
+17. Isograms
+An isogram is a word that has no repeating letters, consecutive or non-consecutive. Implement a function that determines whether a string that contains only letters is an isogram. Assume the empty string is an isogram. Ignore letter case.
+
+Example: (Input --> Output)
+
+"Dermatoglyphics" --> true "aba" --> false "moOse" --> false (ignore letter case)
+ */
+const isIsogram = (word) => {
+  word = word.toLowerCase().split("");
+  const result = word.reduce((accum, letter) => {
+    !accum.includes(letter) && accum.push(letter);
+    return accum;
+  }, []);
+  return result.length === word.length;
+};
+//best practice
+/* 
+function isIsogram(str){
+	return new Set(str.toUpperCase()).size == str.length;
+} */
+console.log(isIsogram("Dermatoglyphics")); //true
+console.log(isIsogram("isIsogram")); //false
+console.log(isIsogram("")); //true "an empty string is a valid isogram"
+// ===================================================
