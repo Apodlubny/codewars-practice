@@ -538,3 +538,22 @@ function basicOp(o, a, b) {
 console.log(basicOp("+", 4, 7)); //11
 console.log(basicOp("-", 15, 18)); //-3
 console.log(basicOp("*", 5, 5)); //25
+// ==================================================================================
+/* 
+27. Convert a string to an array
+
+Write a function to split a string and convert it into an array of words.
+
+Examples (Input ==> Output):
+"Robin Singh" ==> ["Robin", "Singh"]
+
+"I love arrays they are my favorite" ==> ["I", "love", "arrays", "they", "are", "my", "favorite"]
+
+ */
+
+const stringToArray = (string) => string.split(" ");
+
+console.log(stringToArray("Robin Singh")); //[Robin, Singh]
+console.log(stringToArray("I love arrays they are my favorite")); //["I", "love", "arrays", "they", "are", "my", "favorite"]
+
+// ==================================================================================
