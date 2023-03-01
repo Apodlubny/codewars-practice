@@ -480,3 +480,4 @@ function getMiddle(s) {
 
 console.log(getMiddle("test")); //es
 console.log(getMiddle("testing")); //t
+//===================================================
