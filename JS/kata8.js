@@ -572,3 +572,17 @@ Examples
 const stringToNumber = (str) => Number(str);
 console.log(stringToNumber("1234")); //1234
 // ==================================================================================
+/* 
+29. Calculate average
+Write a function which calculates the average of the numbers in a given list.
+
+Note: Empty arrays should return 0.
+ */
+function findAverage(array) {
+  const sum = array.reduce((acc, cur) => acc + cur, 0);
+  return array.length !== 0 ? sum / array.length : 0;
+}
+console.log(findAverage([1, 1, 1])); //1
+console.log(findAverage([1, 2, 3])); //2
+console.log(findAverage([1, 2, 3, 4])); //2,5
+// ==================================================================================
