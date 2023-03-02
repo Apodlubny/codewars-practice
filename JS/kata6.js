@@ -322,3 +322,38 @@ function sumDigPow(a, b) {
 console.log(sumDigPow(1, 10)); //[1, 2, 3, 4, 5, 6, 7, 8, 9]
 console.log(sumDigPow(10, 100)); //[89]
 console.log(sumDigPow(50, 150)); //[89, 135]
+// =============================================================================
+
+/* 
+9. Break camelCase
+
+Complete the solution so that the function will break up camel casing, using a space between words.
+
+Example
+"camelCasing"  =>  "camel Casing"
+"identifier"   =>  "identifier"
+""             =>  ""
+ */
+
+function solution(str) {
+  let result = "";
+
+  for (let i = 0; i < str.length; i += 1) {
+    if (str[i] === str[i].toUpperCase()) {
+      result += " ";
+    }
+    result += str[i];
+  }
+  return result;
+}
+
+// best practice
+/* 
+function solution(string) {
+  return(string.replace(/([A-Z])/g, ' $1'));
+
+} */
+
+console.log(solution("camelCasing")); //'camel Casing'
+console.log(solution("camelCasingTest")); //'camel Casing Test'
+// =============================================================================
