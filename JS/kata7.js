@@ -481,3 +481,18 @@ function getMiddle(s) {
 console.log(getMiddle("test")); //es
 console.log(getMiddle("testing")); //t
 //===================================================
+/* 
+19. Reverse words
+Complete the function that accepts a string parameter, and reverses each word in the string. All spaces in the string should be retained.
+
+Examples
+"This is an example!" ==> "sihT si na !elpmaxe"
+"double  spaces"      ==> "elbuod  secaps"
+ */
+function reverseWords(str) {
+  return str
+    .split(" ")
+    .map((word) => word.split("").reverse().join(""))
+    .join(" ");
+}
+//===================================================
