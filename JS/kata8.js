@@ -586,3 +586,10 @@ console.log(findAverage([1, 1, 1])); //1
 console.log(findAverage([1, 2, 3])); //2
 console.log(findAverage([1, 2, 3, 4])); //2,5
 // ==================================================================================
+/* 30. You Can't Code Under Pressure #1
+Code as fast as you can! You need to double the integer and return it.
+ */
+function doubleInteger(i) {
+  // i will be an integer. Double it and return it.
+  return i * 2;
+}
