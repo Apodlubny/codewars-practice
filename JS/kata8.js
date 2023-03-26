@@ -707,3 +707,9 @@ function betterThanAverage(classPoints, yourPoints) {
 
 console.log(betterThanAverage([100, 40, 34, 57, 29, 72, 57, 88], 75)); //true
 console.log(betterThanAverage([41, 75, 72, 56, 80, 82, 81, 33], 50)); //false
+/* 34. Convert boolean values to strings 'Yes' or 'No'.
+Complete the method that takes a boolean value and return a "Yes" string for true, or a "No" string for false. */
+
+function boolToWord(bool) {
+  return bool ? "Yes" : "No";
+}
