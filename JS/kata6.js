@@ -380,3 +380,53 @@ function alphabetPosition(text) {
     .join(" ");
 }
 // =============================================================================
+/* 
+11. Duplicate Encoder
+The goal of this exercise is to convert a string to a new string where each character in the new string is "(" 
+if that character appears only once in the original string, or ")" if that character appears more than once in 
+the original string. Ignore capitalization when determining if a character is a duplicate.
+
+Examples
+"din"      =>  "((("
+"recede"   =>  "()()()"
+"Success"  =>  ")())())"
+"(( @"     =>  "))((" 
+Notes
+Assertion messages may be unclear about what they display in some languages. If you read "...It Should encode XXX",
+ the "XXX" is the expected result, not the input!
+ */
+
+function duplicateEncode(word) {
+  const charCounts = new Map();
+  const normalizedStr = word.toLowerCase();
+  let result = "";
+  for (let i = 0; i < normalizedStr.length; i++) {
+    const char = normalizedStr[i];
+    charCounts.set(char, (charCounts.get(char) || 0) + 1);
+  }
+  for (let i = 0; i < normalizedStr.length; i++) {
+    const char = normalizedStr[i];
+    if (charCounts.get(char) === 1) {
+      result += "(";
+    } else {
+      result += ")";
+    }
+  }
+
+  return result;
+}
+
+//bes practice
+/* 
+function duplicateEncode(word){
+  return word
+    .toLowerCase()
+    .split('')
+    .map( function (a, i, w) {
+      return w.indexOf(a) == w.lastIndexOf(a) ? '(' : ')'
+    })
+    .join('');
+} */
+
+console.log(duplicateEncode("recede")); //"()()()",
+console.log(duplicateEncode("Success")); //")())())",
