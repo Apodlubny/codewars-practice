@@ -767,3 +767,28 @@ function powersOfTwo(n) {
 }
 console.log(powersOfTwo(1)); //[1, 2]
 console.log(powersOfTwo(4)); //[1, 2, 4, 8, 16]
+
+/* 
+38. Switch it Up
+When provided with a number between 0-9, return it in words.
+
+Input :: 1
+
+Output :: "One". */
+
+function switchItUp(number) {
+  const numberWords = {
+    0: "Zero",
+    1: "One",
+    2: "Two",
+    3: "Three",
+    4: "Four",
+    5: "Five",
+    6: "Six",
+    7: "Seven",
+    8: "Eight",
+    9: "Nine",
+  };
+
+  return numberWords[number] || "";
+}
