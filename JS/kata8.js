@@ -845,3 +845,6 @@ function finalGrade(exam, projects) {
   else if (exam > 50 && projects >= 2) return 75;
   else return 0;
 }
+
+/* 43. Function 2 - squaring an argument */
+const square = (n) => n ** 2;
