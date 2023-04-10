@@ -264,3 +264,10 @@ Assume the test input string is always a valid string. For example, the test inp
 function getAge(inputString) {
   return parseInt(inputString);
 }
+
+/* 44. Remove exclamation marks
+Write function RemoveExclamationMarks which removes all exclamation marks from a given string. */
+
+function removeExclamationMarks(s) {
+  return s.replace(/!/g, "");
+}
