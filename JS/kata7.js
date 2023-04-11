@@ -564,3 +564,18 @@ var numberOfPeople = function (busStops) {
 console.log(numberOfPeople([10, 0], [3, 5], [5, 8])); // 5
 console.log(numberOfPeople([3, 0], [9, 1], [4, 10], [12, 2], [6, 1], [7, 10])); // 17
 console.log(numberOfPeople([3, 0], [9, 1], [4, 8], [12, 2], [6, 1], [7, 8])); // 21
+
+/* 23. Sum of two lowest positive integers
+Create a function that returns the sum of the two lowest positive numbers
+ given an array of minimum 4 positive integers. No floats or non-positive integers will be passed.
+
+For example, when an array is passed like [19, 5, 42, 2, 77], the output should be 7.
+
+[10, 343445353, 3453445, 3453545353453] should return 3453455.
+ */
+function sumTwoSmallestNumbers(numbers) {
+  const sorted = numbers.sort((a, b) => a - b);
+  return sorted[0] + sorted[1];
+}
+console.log(sumTwoSmallestNumbers([5, 8, 12, 19, 22])); //13
+console.log(sumTwoSmallestNumbers([3, 87, 45, 12, 7])); //10
