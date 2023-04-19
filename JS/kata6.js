@@ -547,3 +547,16 @@ For example:
 uniqueInOrder('AAAABBBCCDAABBB') == ['A', 'B', 'C', 'D', 'A', 'B']
 uniqueInOrder('ABBCcAD')         == ['A', 'B', 'C', 'c', 'A', 'D']
 uniqueInOrder([1,2,2,3,3])       == [1,2,3] */
+
+var uniqueInOrder = function (iterable) {
+  let uniqueSeq = [];
+  let lastChar = null;
+  for (let i = 0; i < iterable.length; i++) {
+    let char = iterable[i];
+    if (char !== lastChar) {
+      uniqueSeq.push(char);
+      lastChar = char;
+    }
+  }
+  return uniqueSeq;
+};
