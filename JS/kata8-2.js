@@ -428,6 +428,8 @@ function findDifference(a, b) {
   const volumeB = calcVolume(b);
   return Math.abs(volumeA - volumeB);
 }
+//=================================================================
+
 
 /* 53. Double Char
 Given a string, you have to return a string in which each character (case-sensitive) is repeated once.
@@ -443,6 +445,8 @@ function doubleChar(str) {
     .map((s) => s + s)
     .join("");
 }
+//=================================================================
+
 /* 54. Remove First and Last Character
 It's pretty straightforward. Your goal is to create a function that removes the first and last
  characters of a string. You're given one parameter, the original string. You don't have to
@@ -450,3 +454,25 @@ It's pretty straightforward. Your goal is to create a function that removes the 
 function removeChar(str) {
   return str.slice(1, -1);
 }
+
+//=================================================================
+/* 55. Twice as old
+Your function takes two arguments:
+
+current father's age (years)
+current age of his son (years)
+Сalculate how many years ago the father was twice as old as his son (or in how many years he will be twice as old). 
+The answer is always greater or equal to 0, no matter if it was in the past or it is in the future. */
+
+function twiceAsOld(dadYearsOld, sonYearsOld) {
+  const ageDifference=dadYearsOld - sonYearsOld
+  const yearsAgo = Math.abs(ageDifference - sonYearsOld)
+ return yearsAgo
+  }
+
+/* best practice
+function twiceAsOld(dadYearsOld, sonYearsOld) {
+  return Math.abs(dadYearsOld - 2 * sonYearsOld);
+}
+*/
+//=================================================================
