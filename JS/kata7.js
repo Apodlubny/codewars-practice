@@ -579,3 +579,29 @@ function sumTwoSmallestNumbers(numbers) {
 }
 console.log(sumTwoSmallestNumbers([5, 8, 12, 19, 22])); //13
 console.log(sumTwoSmallestNumbers([3, 87, 45, 12, 7])); //10
+
+//==================================================================
+/* 24. Shortest Word
+Simple, given a string of words, return the length of the shortest word(s).
+
+String will never be empty and you do not need to account for different data types.
+
+ */
+
+function findShort(s){
+  const words = s.split(' ');
+ let shortestWordLength = Infinity;
+
+ for (const word of words) {
+   const wordLength = word.length;
+   shortestWordLength = Math.min(shortestWordLength, wordLength);
+ }
+
+ return shortestWordLength;
+}
+/* best practice
+function findShort(s){
+  return Math.min.apply(null, s.split(' ').map(w => w.length));
+}
+*/
+//==================================================================
