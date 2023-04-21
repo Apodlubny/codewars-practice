@@ -547,3 +547,40 @@ function litres(time) {
   return Math.floor(time * 0.5);
 }
 //=================================================================
+
+/* 59. Thinkful - Logic Drills: Traffic light
+You're writing code to control your town's traffic lights. You need a function to handle each change from green, to yellow, to red, and then to green again.
+
+Complete the function that takes a string as an argument representing the current state of the light and returns a string representing the state the light should change to.
+
+For example, when the input is green, output should be yellow. */
+
+function updateLight(current) {
+  
+  const stateMap = {
+    "green": "yellow",
+    "yellow": "red",
+    "red": "green"
+  };
+
+  // Check if the input state is a valid state, if not, return an error message
+  if (!stateMap.hasOwnProperty(current)) {
+    return "Error: Invalid traffic light state";
+  }
+
+  // Get the next state from the state map
+  const nextState = stateMap[current];
+
+  return nextState;
+
+}
+
+/* best prsctice 
+function updateLight(current) {
+  
+  return current === 'yellow' ? 'red' : current === 'green' ? 'yellow' : 'green';
+
+}
+*/
+
+//=================================================================
