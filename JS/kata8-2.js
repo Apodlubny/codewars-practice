@@ -584,3 +584,35 @@ function updateLight(current) {
 */
 
 //=================================================================
+/* 60. Removing Elements
+Take an array and remove every second element from the array. Always keep
+ the first element and start removing with the next element.
+
+Example:
+["Keep", "Remove", "Keep", "Remove", "Keep", ...] --> ["Keep", "Keep", "Keep", ...]
+
+None of the arrays will be empty, so you don't have to worry about that! */
+
+function removeEveryOther(arr){
+  return arr.filter((element, index) => {
+    // Keep the first element
+    if (index === 0) {
+      return true;
+    }
+    // Remove every second element
+    else if (index % 2 === 1) {
+      return false;
+    }
+    // Keep all other elements
+    return true;
+  });
+   
+}
+
+/* best practice 
+function removeEveryOther(arr){
+  return arr.filter(function(elem, index) {
+    return index % 2 === 0;
+  });
+}
+ */
