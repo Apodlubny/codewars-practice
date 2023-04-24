@@ -588,20 +588,33 @@ String will never be empty and you do not need to account for different data typ
 
  */
 
-function findShort(s){
-  const words = s.split(' ');
- let shortestWordLength = Infinity;
+function findShort(s) {
+  const words = s.split(" ");
+  let shortestWordLength = Infinity;
 
- for (const word of words) {
-   const wordLength = word.length;
-   shortestWordLength = Math.min(shortestWordLength, wordLength);
- }
+  for (const word of words) {
+    const wordLength = word.length;
+    shortestWordLength = Math.min(shortestWordLength, wordLength);
+  }
 
- return shortestWordLength;
+  return shortestWordLength;
 }
 /* best practice
 function findShort(s){
   return Math.min.apply(null, s.split(' ').map(w => w.length));
 }
 */
+//==================================================================
+/* 25. Sort Numbers
+Finish the solution so that it sorts the passed in array of numbers.
+ If the function passes in an empty array or null/nil value then it should return an empty array.
+
+For example:
+
+solution([1, 2, 10, 50, 5]); // should return [1,2,5,10,50]
+solution(null); // should return [] */
+
+function solution(nums) {
+  return !nums || nums.length === 0 ? [] : nums.sort((a, b) => a - b);
+}
 //==================================================================
