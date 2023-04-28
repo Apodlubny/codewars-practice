@@ -123,3 +123,15 @@ Note: if there is nothing to sum, the sum is default to 0.
 function positiveSum(arr) {
   return arr.reduce((acc, num) => (num > 0 ? acc + num : acc), 0);
 }
+//=========================================================================
+/* 67. You only need one - Beginner
+You will be given an array a and a value x. All you need to do is check whether the provided array contains the value.
+
+Array can contain numbers or strings. X can be either.
+
+Return true if the array contains the value, false if not. */
+
+function check(a, x) {
+  return a.includes(x);
+}
+//=========================================================================
