@@ -139,7 +139,9 @@ function check(a, x) {
 
 Exclusive "or" (xor) Logical Operator
 Overview
-In some scripting languages like PHP, there exists a logical operator (e.g. &&, ||, and, or, etc.) called the "Exclusive Or" (hence the name of this Kata). The exclusive or evaluates two booleans. It then returns true if exactly one of the two expressions are true, false otherwise. For example:
+In some scripting languages like PHP, there exists a logical operator (e.g. &&, ||, and, or, etc.) called the "Exclusive Or"
+ (hence the name of this Kata). The exclusive or evaluates two booleans. It then returns true if exactly one of the two expressions
+  are true, false otherwise. For example:
 
 false xor false == false // since both are false
 true xor false == true // exactly one of the two expressions are true
@@ -153,3 +155,20 @@ function xor(a, b) {
 //best practice function xor(a, b) {
 // return a != b;
 // }
+//=========================================================================
+
+/* 69. The Wide-Mouthed frog!
+The wide-mouth frog is particularly interested in the eating habits of other creatures.
+
+He just can't stop asking the creatures he encounters what they like to eat. But, then he meets the alligator
+ who just LOVES to eat wide-mouthed frogs!
+
+When he meets the alligator, it then makes a tiny mouth.
+
+Your goal in this kata is to create complete the mouth_size method this method takes one argument animal
+ which corresponds to the animal encountered by the frog. If this one is an alligator (case-insensitive) return small otherwise return wide.
+ */
+function mouthSize(animal) {
+  return animal.toLowerCase() === "alligator" ? "small" : "wide";
+}
+//=========================================================================
