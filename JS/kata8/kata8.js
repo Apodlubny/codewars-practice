@@ -10,7 +10,8 @@ console.log(multiply(2, 2)); //4
 console.log(multiply(3, 5)); //15
 // ===========================================================
 
-// 2. Write a function that takes an array of numbers and returns the sum of the numbers. The numbers can be negative or non-integer. If the array does not contain any numbers then you should return 0.
+// 2. Write a function that takes an array of numbers and returns the sum of the numbers. The numbers can be negative or non-integer.
+// If the array does not contain any numbers then you should return 0.
 
 // Examples
 // Input: [1, 5.2, 4, 0, -1]
