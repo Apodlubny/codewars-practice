@@ -252,4 +252,19 @@ function mxdiflg(a1, a2) {
   return Math.max(max1 - min2, max2 - min1);
 }
 
-//======================================================================//
+//==========================================================================================================================================//
+/* 40. Summing a number's digits
+Write a function named sumDigits which takes a number as input and returns the sum of the absolute value of each of the number's decimal digits.
+
+For example: (Input --> Output)
+
+10 --> 1
+99 --> 18
+-32 --> 5
+Let's assume that all numbers in the input will be integer values. */
+function sumDigits(number) {
+  return String(Math.abs(number))
+    .split("")
+    .reduce((acc, n) => acc + Number(n), 0);
+}
+//==========================================================================================================================================//
