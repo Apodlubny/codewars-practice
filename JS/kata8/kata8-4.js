@@ -86,8 +86,7 @@ Examples: (Input --> Output)
 30 --> "drink whisky" */
 
 function peopleWithAgeDrink(old) {
-  return;
-  old < 14
+  return old < 14
     ? "drink toddy"
     : old < 18
     ? "drink coke"
