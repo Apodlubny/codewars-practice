@@ -354,3 +354,23 @@ function arithmetic(a, b, operator) {
   return operators[operator](a, b);
 }
 //==========================================================================================================================================//
+/* 45. Remove anchor from URL
+Complete the function/method so that it returns the url with anything after the anchor (#) removed.
+Examples
+"www.codewars.com#about" --> "www.codewars.com"
+"www.codewars.com?page=1" -->"www.codewars.com?page=1" */
+
+function removeUrlAnchor(url) {
+  return url.indexOf("#") !== -1 ? url.substring(0, url.indexOf("#")) : url;
+}
+/* best practice
+function removeUrlAnchor(url){
+  return url.split('#')[0];
+} 
+The split('#') method is called on the url string, which splits the string into an array using the anchor (#) as the delimiter.
+ This creates an array with two elements: the portion of the URL before the anchor and the portion after the anchor.
+For example, if the url is "www.codewars.com#about", the split('#') method will return ["www.codewars.com", "about"].
+The [0] index access is used to retrieve the first element of the resulting array, which represents the portion of the URL before the anchor.
+For example, if the url is "www.codewars.com#about", split('#')[0] will return "www.codewars.com".
+The retrieved portion of the URL before the anchor is then returned as the result of the function.*/
+//==========================================================================================================================================//
