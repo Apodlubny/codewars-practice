@@ -235,3 +235,16 @@ function addLength(str) {
   return str.split(" ").map((word) => `${word} ${word.length}`);
 }
 //=========================================================================================================================
+/* 105. Exclamation marks series #11: Replace all vowel to exclamation mark in the sentence
+Description:
+Replace all vowel to exclamation mark in the sentence. aeiouAEIOU is vowel.
+
+Examples
+replace("Hi!") === "H!!"
+replace("!Hi! Hi!") === "!H!! H!!"
+replace("aeiou") === "!!!!!"
+replace("ABCDE") === "!BCD!" */
+function replace(s) {
+  return s.replace(/[aoiueAOIEU]/g, "!");
+}
+//=========================================================================================================================
