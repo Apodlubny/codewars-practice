@@ -255,8 +255,8 @@ For example:
 
 [1, 2, 3] --> [2, 4, 6] */
 
-function maps(x){
-  return x.map(n => n * 2);
+function maps(x) {
+  return x.map((n) => n * 2);
 }
 //=========================================================================================================================
 /* 107. How many lightsabers do you own?
@@ -268,7 +268,7 @@ Note: your function should have a default parameter.
 For example(Input --> Output):
 "anyone else" --> 0
 "Zach" --> 18 */
-const howManyLightsabersDoYouOwn = name => name === 'Zach' ? 18 : 0;
+const howManyLightsabersDoYouOwn = (name) => (name === "Zach" ? 18 : 0);
 //=========================================================================================================================
 /* 108. Hello, Name or World!
  Define a method hello that returns "Hello, Name!" to a given name, or says Hello, World! if name is not given (or passed as an empty String).
@@ -282,10 +282,10 @@ Examples:
 * With `name` not given 
   or `name` = ""        => return "Hello, World!"*/
 
-  const hello = s =>
-  `Hello, ${s ? (s[0].toUpperCase() + s.slice(1).toLowerCase()) : 'World'}!`;
+const hello = (s) =>
+  `Hello, ${s ? s[0].toUpperCase() + s.slice(1).toLowerCase() : "World"}!`;
 
-  /* function hello(name) {
+/* function hello(name) {
     if (name && name.length > 0) {
    
     const formattedName = name.charAt(0).toUpperCase() + name.slice(1).toLowerCase();
@@ -303,7 +303,7 @@ You will be given an array a and a value x. All you need to do is check whether 
 
 Array can contain numbers or strings. x can be either. Return true if the array contains the value, false if not. With strings you will need to account for case. */
 
-const check = (a,x) => a.includes(x);
+const check = (a, x) => a.includes(x);
 //=========================================================================================================================
 
 /* 110. Grasshopper - Array Mean
@@ -321,9 +321,10 @@ For an example list of 1, 3, 5, 7
 16/4 = 4
 3. The mean (or average) of this list is 4
  */
-const findAverage = nums => nums.length === 0 ? 0 : nums.reduce((a,n) => n+a, 0)/nums.length
-  //=========================================================================================================================
-  /* 111. Grasshopper - Check for factor
+const findAverage = (nums) =>
+  nums.length === 0 ? 0 : nums.reduce((a, n) => n + a, 0) / nums.length;
+//=========================================================================================================================
+/* 111. Grasshopper - Check for factor
 This function should test if the factor is a factor of base.
 Return true if it is a factor or false if it is not.
 About factors
@@ -337,10 +338,10 @@ For example 2 is not a factor of 7 because: 7 % 2 = 1
 
 Note: base is a non-negative number, factor is a positive number.
  */
-function checkForFactor (base, factor) {
+function checkForFactor(base, factor) {
   return base % factor === 0;
 }
-  //=========================================================================================================================
+//=========================================================================================================================
 /* 112. Return the day
 Complete the function which returns the weekday according to the input number:
 
@@ -353,9 +354,19 @@ Complete the function which returns the weekday according to the input number:
 7 returns "Saturday"
 Otherwise returns "Wrong, please enter a number between 1 and 7"
  */
-function whatday(num) { 
-  days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
-  return num >= 1 && num <= 7 ? days[num-1] : "Wrong, please enter a number between 1 and 7";
+function whatday(num) {
+  days = [
+    "Sunday",
+    "Monday",
+    "Tuesday",
+    "Wednesday",
+    "Thursday",
+    "Friday",
+    "Saturday",
+  ];
+  return num >= 1 && num <= 7
+    ? days[num - 1]
+    : "Wrong, please enter a number between 1 and 7";
 }
 //=========================================================================================================================
 /* 113. Fundamentals: Return
@@ -376,28 +387,28 @@ exponential = exponent
 subtraction = subt
 
 Note: All math operations will be: a (operation) b */
-function add(a,b){
-  return a + b
+function add(a, b) {
+  return a + b;
 }
 
-function divide(a,b){
-  return a / b
+function divide(a, b) {
+  return a / b;
 }
 
-function multiply(a,b){
-  return a * b
+function multiply(a, b) {
+  return a * b;
 }
 
-function mod(a,b){
-  return a % b
+function mod(a, b) {
+  return a % b;
 }
- 
-function exponent(a,b){
-  return a ** b
+
+function exponent(a, b) {
+  return a ** b;
 }
-  
-function subt(a,b){
-  return a -= b
+
+function subt(a, b) {
+  return (a -= b);
 }
 //=========================================================================================================================
 
@@ -411,7 +422,7 @@ Output: String with comma delimited elements of the array in th same order.
 "h,o,l,a"
 
  */
-function printArray(array){
+function printArray(array) {
   return array.toString();
 }
 //=========================================================================================================================
@@ -428,7 +439,7 @@ Get rid of them. Only the ending ones.
 -1050 -> -105
 Zero alone is fine, don't worry about it. Poor guy anyway */
 function noBoringZeros(n) {
-  return +n.toString().replace(/0+$/,'');
+  return +n.toString().replace(/0+$/, "");
 }
 /* no reg exp solution
 function noBoringZeros(n) {
@@ -454,11 +465,11 @@ The elements in the returned array should be in the same order as in the initial
 
  */
 
-function gooseFilter (birds) {
+function gooseFilter(birds) {
   var geese = ["African", "Roman Tufted", "Toulouse", "Pilgrim", "Steinbacher"];
-  return birds.filter(item=> !geese.includes(item))
+  return birds.filter((item) => !geese.includes(item));
   // return an array containing all of the strings in the input array except those that match strings in geese
-};
+}
 //=========================================================================================================================
 
 /* 117. Define a card suit
@@ -472,13 +483,23 @@ Our deck (is preloaded):
 ('3♠') -> return 'spades' */
 
 function defineSuit(card) {
-  if (card.includes('♣')) return 'clubs';
-  if (card.includes('♦')) return 'diamonds';
-  if (card.includes('♥')) return 'hearts';
-  if (card.includes('♠')) return 'spades';
+  if (card.includes("♣")) return "clubs";
+  if (card.includes("♦")) return "diamonds";
+  if (card.includes("♥")) return "hearts";
+  if (card.includes("♠")) return "spades";
 }
 /* solution using Object
 function defineSuit(card) {
     return {'♣': 'clubs', '♠': 'spades', '♦': 'diamonds', '♥': 'hearts'}[card.slice(-1)];
 } */
+//=========================================================================================================================
+/* 118. The 'if' function
+Create a function called _if which takes 3 arguments: a value bool and 2 functions (which do not take any parameters): func1 and func2
+When bool is truthy, func1 should be called, otherwise call the func2.
+Example:
+_if(true, function(){console.log("True")}, function(){console.log("false")})
+// Logs 'True' to the console. */
+function _if(bool, func1, func2) {
+  return bool ? func1() : func2();
+}
 //=========================================================================================================================
