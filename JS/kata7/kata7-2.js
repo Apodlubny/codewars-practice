@@ -385,15 +385,15 @@ Example: (input --> output)
 "ATTGC" --> "TAACG"
 "GTAT" --> "CATA"
  */
-function DNAStrand(dna){
-  return dna.replace(/./g, function(match) {
-   return {
-     A: 'T',
-     T: 'A',
-     C: 'G',
-     G: 'C',
-   }[match];
- });
+function DNAStrand(dna) {
+  return dna.replace(/./g, function (match) {
+    return {
+      A: "T",
+      T: "A",
+      C: "G",
+      G: "C",
+    }[match];
+  });
 }
 //==========================================================================================================================================//
 /* 47. Alternate capitalization
@@ -404,12 +404,16 @@ For example, capitalize("abcdef") = ['AbCdEf', 'aBcDeF']. See test cases for mor
 The input will be a lowercase string with no spaces.
 
 Good luck! */
-function capitalize(s){
-  const evenChars = s.split('').map((char, index) => (index % 2 === 0 ? char.toUpperCase() : char));
- const oddChars = s.split('').map((char, index) => (index % 2 !== 0 ? char.toUpperCase() : char));
+function capitalize(s) {
+  const evenChars = s
+    .split("")
+    .map((char, index) => (index % 2 === 0 ? char.toUpperCase() : char));
+  const oddChars = s
+    .split("")
+    .map((char, index) => (index % 2 !== 0 ? char.toUpperCase() : char));
 
- return [evenChars.join(''), oddChars.join('')];
-};
+  return [evenChars.join(""), oddChars.join("")];
+}
 //==========================================================================================================================================//
 
 /* 48. Alphabet war
@@ -441,16 +445,22 @@ alphabetWar("zzzzs");    //=> Right side wins!
 alphabetWar("wwwwwwz");  //=> Left side wins! */
 
 function alphabetWar(fight) {
-  const leftPower = { 'w': 4, 'p': 3, 'b': 2, 's': 1 };
-  const rightPower = { 'm': 4, 'q': 3, 'd': 2, 'z': 1 };
-  
-  const leftSum = [...fight].reduce((sum, letter) => sum + (leftPower[letter] || 0), 0);
-  const rightSum = [...fight].reduce((sum, letter) => sum + (rightPower[letter] || 0), 0);
-  
+  const leftPower = { w: 4, p: 3, b: 2, s: 1 };
+  const rightPower = { m: 4, q: 3, d: 2, z: 1 };
+
+  const leftSum = [...fight].reduce(
+    (sum, letter) => sum + (leftPower[letter] || 0),
+    0
+  );
+  const rightSum = [...fight].reduce(
+    (sum, letter) => sum + (rightPower[letter] || 0),
+    0
+  );
+
   return leftSum > rightSum
-    ? 'Left side wins!'
+    ? "Left side wins!"
     : rightSum > leftSum
-    ? 'Right side wins!'
+    ? "Right side wins!"
     : "Let's fight again!";
 }
 
@@ -468,11 +478,9 @@ Your task is to write a function which calculates the value of a word based off 
 
 The input will always be made of only lowercase letters and will never be empty. */
 
-function wordsToMarks(str)
-{
+function wordsToMarks(str) {
   let sum = 0;
-  for (let i = 0; i < str.length; i++)
-    sum += str.charCodeAt(i) - 96;
+  for (let i = 0; i < str.length; i++) sum += str.charCodeAt(i) - 96;
   return sum;
 }
 //==========================================================================================================================================//
@@ -488,12 +496,21 @@ Take the square root of the result.
 Divide by two.
 Example
 predictAge(65, 60, 75, 55, 60, 63, 64, 45) === 86 */
-function predictAge(...ages){
-  const predictedAge = Math.sqrt(ages.reduce((sum, age) => sum + age ** 2, 0)) / 2;
+function predictAge(...ages) {
+  const predictedAge =
+    Math.sqrt(ages.reduce((sum, age) => sum + age ** 2, 0)) / 2;
   return Math.floor(predictedAge);
 }
 
 /* best prctice solution 
 const predictAge = (...ages) => Math.hypot(...ages) / 2 | 0;
  */
+//==========================================================================================================================================//
+
+/* 51. No oddities here
+Write a small function that returns the values of an array that are not odd.
+All values in the array will be integers. Return the good values in the order they are given. */
+
+const noOdds = (values) => values.filter((i) => i % 2 === 0);
+
 //==========================================================================================================================================//
