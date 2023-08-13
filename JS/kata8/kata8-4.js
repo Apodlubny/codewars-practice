@@ -509,3 +509,36 @@ Example(Input --> Output)
 "john McClane" --> "McClane john" */
 const nameShuffler = (str) => str.split(" ").reverse().join(" ");
 //=========================================================================================================================
+/* 120. Exclamation marks series #6: Remove n exclamation marks in the sentence from left to right
+Description:
+Remove n exclamation marks in the sentence from left to right. n is positive integer.
+
+Examples
+remove("Hi!",1) === "Hi"
+remove("Hi!",100) === "Hi"
+remove("Hi!!!",1) === "Hi!!"
+remove("Hi!!!",100) === "Hi"
+remove("!Hi",1) === "Hi"
+remove("!Hi!",1) === "Hi!"
+remove("!Hi!",100) === "Hi"
+remove("!!!Hi !!hi!!! !hi",1) === "!!Hi !!hi!!! !hi"
+remove("!!!Hi !!hi!!! !hi",3) === "Hi !!hi!!! !hi"
+remove("!!!Hi !!hi!!! !hi",5) === "Hi hi!!! !hi"
+remove("!!!Hi !!hi!!! !hi",100) === "Hi hi hi"
+ */
+
+function remove(s, n) {
+  while (n > 0) {
+    s = s.replace("!", "");
+    n -= 1;
+  }
+  return s;
+}
+
+//NOTHER SOLUTION with thernar
+/* 
+function remove(s,n){
+  return n>0 ? remove(s.replace('!', ''), n-1) : s;
+}
+ */
+//=========================================================================================================================
