@@ -30,3 +30,16 @@ function remove(string) {
   return `${string.replace(/!/g, "")}!`;
 }
 //====================================================================================================================//
+/* 123. 5 without numbers !!
+Write a function that always returns 5
+Sounds easy right? Just bear in mind that you can't use any of the following characters: 0123456789*+-/
+ */
+function unusualFive() {
+  let array = ["a", "b", "c", "d", "e", "f"];
+  return array.indexOf("f");
+}
+/* best solution
+function unusualFive() {
+  return 'fivee'.length
+} */
+//====================================================================================================================//
