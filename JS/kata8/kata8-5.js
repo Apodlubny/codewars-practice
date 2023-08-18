@@ -43,3 +43,26 @@ function unusualFive() {
   return 'fivee'.length
 } */
 //====================================================================================================================//
+/* 124. Regex count lowercase letters
+Your task is simply to count the total number of lowercase letters in a string.
+Examples
+"abc" ===> 3
+"abcABC123" ===> 3
+"abcABC123!@€£#$%^&*()_-+=}{[]|\':;?/>.<,~" ===> 3
+"" ===> 0;
+"ABC123!@€£#$%^&*()_-+=}{[]|\':;?/>.<,~" ===> 0
+"abcdefghijklmnopqrstuvwxyz" ===> 26 */
+
+function lowercaseCount(str) {
+  return str.split("").reduce((acc, i) => {
+    if (i >= "a" && i <= "z") {
+      return acc + 1;
+    }
+    return acc;
+  }, 0);
+}
+/* regexp solution 
+function lowercaseCount(str){
+    return (str.match(/[a-z]/g) || []).length
+} */
+//====================================================================================================================//
