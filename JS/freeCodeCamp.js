@@ -13,3 +13,17 @@ function convertCtoF(celsius) {
 
 // Change the inputs below to test your code
 convertCtoF(30);
+
+//******************************************************************************************************************************
+/*
+Зворотний рядок
+Переверніть наданий рядок та поверніть рядок у зворотньому порядку.
+
+Наприклад, "hello" повинен стати "olleh". 
+ */
+
+function reverseString(str) {
+  return str.split("").reverse().join("");
+}
+
+reverseString("hello");
