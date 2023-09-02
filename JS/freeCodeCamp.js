@@ -119,3 +119,21 @@ function confirmEnding(str, target) {
 confirmEnding("Bastian", "n");
 
 //******************************************************************************************************************************
+/* Повторення рядка Повторення рядка
+Повторіть заданий рядок str (перший аргумент) num разів (другий аргумент). Поверніть порожній рядок, якщо num не є додатним числом. 
+Не використовуйте вбудований метод .repeat() для цього завдання. */
+function repeatStringNumTimes(str, num) {
+  let multiString = "";
+  for (let i = 0; i < num; i += 1) {
+    multiString += str;
+  }
+  return multiString;
+}
+
+repeatStringNumTimes("abc", 3);
+
+//recurcion solution
+function repeatStringNumTimes(str, num) {
+  return num < 1 ? "" : str + repeatStringNumTimes(str, num - 1);
+}
+//******************************************************************************************************************************
