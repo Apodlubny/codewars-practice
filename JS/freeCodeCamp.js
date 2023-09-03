@@ -262,4 +262,12 @@ function mutation(arr) {
 }
 
 mutation(["hello", "hey"]);
+
+//using chaining and every()
+function mutation(arr) {
+  return arr[1]
+    .toLowerCase()
+    .split("")
+    .every((letter) => arr[0].toLowerCase().indexOf(letter) !== -1);
+}
 //******************************************************************************************************************************
